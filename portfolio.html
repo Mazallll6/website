@@ -1,39 +1,44 @@
-<!-- Используй ту же структуру head и nav, что в index.html -->
 <section class="container my-5">
-    <h2 class="text-center mb-4">Примеры наших работ</h2>
-    <div class="row g-3">
-        <!-- Работа 1 -->
-        <div class="col-md-4 col-6">
-            <img src="img/work1.jpg" class="img-thumbnail" 
-                 data-bs-toggle="modal" data-bs-target="#galleryModal" 
-                 data-bs-img="img/work1.jpg" alt="Проект 1">
+    <h2 class="text-center mb-5 fw-bold">Портфолио наших проектов</h2>
+    <div class="row g-4">
+        <!-- Проект 1 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card portfolio-card h-100 shadow-sm border-0">
+                <div class="portfolio-img-wrapper">
+                    <img src="img/work1.jpg" class="card-img-top" alt="Лендинг для бизнеса">
+                    <div class="portfolio-overlay">
+                        <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="img/work1.jpg">Увеличить</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Корпоративный портал</h5>
+                    <p class="card-text text-muted small">Разработка сложной структуры и UX-дизайна для крупной IT-компании.</p>
+                    <div class="d-flex gap-2">
+                        <span class="badge bg-primary">UI/UX</span>
+                        <span class="badge bg-secondary">Bootstrap</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Работа 2 -->
-        <div class="col-md-4 col-6">
-            <img src="img/work2.jpg" class="img-thumbnail" 
-                 data-bs-toggle="modal" data-bs-target="#galleryModal" 
-                 data-bs-img="img/work2.jpg" alt="Проект 2">
-        </div>
-    </div>
-</section>
 
-<!-- Модальное окно для галереи из методички -->
-<div class="modal fade" id="galleryModal" tabindex="-1">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-body">
-                <img src="" class="img-fluid" id="modalImage">
+        <!-- Проект 2 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card portfolio-card h-100 shadow-sm border-0">
+                <div class="portfolio-img-wrapper">
+                    <img src="img/work2.jpg" class="card-img-top" alt="Интернет-магазин">
+                    <div class="portfolio-overlay">
+                        <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-img="img/work2.jpg">Увеличить</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">E-commerce платформа</h5>
+                    <p class="card-text text-muted small">Создание онлайн-магазина с интеграцией платежных систем и каталога.</p>
+                    <div class="d-flex gap-2">
+                        <span class="badge bg-success">Shop</span>
+                        <span class="badge bg-info">JS</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-<script>
-    const galleryModal = document.getElementById('galleryModal')
-    galleryModal.addEventListener('show.bs.modal', event => {
-        const img = event.relatedTarget
-        const imgSrc = img.getAttribute('data-bs-img')
-        const modalImage = galleryModal.querySelector('#modalImage')
-        modalImage.src = imgSrc
-    })
-</script>
+</section>
