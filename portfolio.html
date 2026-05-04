@@ -1,0 +1,39 @@
+<!-- Используй ту же структуру head и nav, что в index.html -->
+<section class="container my-5">
+    <h2 class="text-center mb-4">Примеры наших работ</h2>
+    <div class="row g-3">
+        <!-- Работа 1 -->
+        <div class="col-md-4 col-6">
+            <img src="img/work1.jpg" class="img-thumbnail" 
+                 data-bs-toggle="modal" data-bs-target="#galleryModal" 
+                 data-bs-img="img/work1.jpg" alt="Проект 1">
+        </div>
+        <!-- Работа 2 -->
+        <div class="col-md-4 col-6">
+            <img src="img/work2.jpg" class="img-thumbnail" 
+                 data-bs-toggle="modal" data-bs-target="#galleryModal" 
+                 data-bs-img="img/work2.jpg" alt="Проект 2">
+        </div>
+    </div>
+</section>
+
+<!-- Модальное окно для галереи из методички -->
+<div class="modal fade" id="galleryModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="" class="img-fluid" id="modalImage">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const galleryModal = document.getElementById('galleryModal')
+    galleryModal.addEventListener('show.bs.modal', event => {
+        const img = event.relatedTarget
+        const imgSrc = img.getAttribute('data-bs-img')
+        const modalImage = galleryModal.querySelector('#modalImage')
+        modalImage.src = imgSrc
+    })
+</script>

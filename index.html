@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebStudio — Создание современных сайтов</title>
+    <!-- Bootstrap и Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-code me-2"></i>WebStudio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Портфолио</a></li>
+                </ul>
+                <button class="btn btn-outline-light ms-3" data-bs-toggle="modal" data-bs-target="#loginModal">Вход</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero-блок (Видео или Баннер) -->
+    <section class="hero-section text-center text-white py-5">
+        <div class="container">
+            <h1 class="display-4">Разрабатываем цифровое будущее</h1>
+            <p class="lead">Создаем сайты, которые приносят прибыль.</p>
+            <div class="ratio ratio-16x9 mx-auto mb-4" style="max-width: 800px;">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Услуг -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Наши услуги</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 service-card text-center p-3">
+                    <i class="fas fa-laptop-code fa-3x text-primary mb-3"></i>
+                    <h3>Лендинги</h3>
+                    <p>Одностраничные сайты с высокой конверсией.</p>
+                    <span class="badge bg-success mb-2">Хит продаж</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 service-card text-center p-3">
+                    <i class="fas fa-shopping-cart fa-3x text-primary mb-3"></i>
+                    <h3>Магазины</h3>
+                    <p>Полноценные торговые площадки под ключ.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 service-card text-center p-3">
+                    <i class="fas fa-mobile-alt fa-3x text-primary mb-3"></i>
+                    <h3>UX/UI Дизайн</h3>
+                    <p>Удобные интерфейсы для мобильных и десктопов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>© 2026 WebStudio. Все права защищены.</p>
+            <div class="social-links">
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-telegram fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
