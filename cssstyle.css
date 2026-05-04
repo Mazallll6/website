@@ -27,4 +27,48 @@ body {
 
 .img-thumbnail:hover {
     transform: scale(1.05);
+/* Эффект наведения для карточек портфолио */
+.portfolio-card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    overflow: hidden;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+}
+
+/* Обводка и зум картинки */
+.portfolio-img-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-img-wrapper img {
+    transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover .portfolio-img-wrapper img {
+    transform: scale(1.1);
+}
+
+/* Скрытая кнопка при наведении */
+.portfolio-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.badge {
+    font-weight: 500;
+    font-size: 0.75rem;
 }
